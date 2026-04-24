@@ -70,9 +70,9 @@ such as fetching data from a server or reading a file.
 Instead of returning the result immediately, a Promise returns a placeholder value that will be available in the future.
 
 Difference between pending, fulfilled, rejected 
-Pending  : Initial state; operation is still running; no result yet │
-Fulfilled : Operation completed successfully; result is available    │
- Rejected : Operation failed; error is returned
+Pending  : Initial state; operation is still running; no result yet 
+Fulfilled : Operation completed successfully; result is available 
+Rejected : Operation failed; error is returned
 
 Why Promises are useful in real-world async operations 
 Promises are useful in real-world async operations because they handle tasks like API calls and file loading in a clean way, 
