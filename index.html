@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Local Storage Demo</title>
+</head>
+<body>
+  <h2>Simple Form</h2>
+  <form id="userForm">
+    <input type="text" id="name" placeholder="Enter Name" required>
+    <input type="email" id="email" placeholder="Enter Email" required>
+    <button type="submit">Save</button>
+  </form>
+  <br>
+  <button onclick="clearData()">Clear Data</button>
+  <hr>
+  <h3>Saved Data:</h3>
+  <p id="display"></p>
+
+  <script src="local-storage.js"></script>
+
+</body>
+</html>
