@@ -1,23 +1,33 @@
 //Question no 1
-function getData() {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve("Data loaded successfully"); 
-    }, 2000);
-  });
+function checkUser(username) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            // Mock condition
+            if (username === "Aditi") {
+                resolve("Login successful");
+            } else {
+                reject("Login failed ,User not found");
+            }
+
+        }, 2000);
+    });
 }
-// async function (can use await inside it)
-async function fetchData() {
-  try {
-    // await pauses here until Promise is resolved
-    const result = await getData();
-    console.log(result);
-  } catch (error) {
-    // runs if Promise is rejected
-    console.log("Error:", error);
-  }
+// Async function using await
+async function runCheck() {
+    try {
+        // Wait for Promise result
+        const result = await checkUser("Aditi");
+
+        console.log("Success:", result);
+
+    } catch (error) {
+        console.log("Error:", error);
+
+    } finally {
+        console.log("Execution completed");
+    }
 }
-fetchData();
+runCheck();
 
 //Question no:2
 // Promise that simulates data loading (with possible error)
